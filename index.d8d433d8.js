@@ -1,2 +1,0 @@
-const e=new URLSearchParams({fields:"name.official,capital,population,flags.svg,languages"}),t=t=>{fetch(`https://restcountries.com/v3.1/name/${t}?${e.replaceAll("%2C",",")}`).then((e=>{if(!e.ok)throw new Error(e.status);return e.json()})).then((e=>{console.log(e)})).catch((e=>{}))};document.querySelector("#search-box").addEventListener("input",(e=>{""!==e.currentTarget.value&&t(e.target.value)})),t(ukra);
-//# sourceMappingURL=index.d8d433d8.js.map
