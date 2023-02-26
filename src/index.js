@@ -1,14 +1,17 @@
 import './css/styles.css';
-import {fetchCountries} from './js/fetchCountries';
+const debounce = require('lodash.debounce');
+// import Notiflix from 'notiflix';
+import { fetchCountries } from './js/fetchCountries';
 
 const DEBOUNCE_DELAY = 300;
 const searchInput = document.querySelector('#search-box');
+const list = document.querySelector('.country-list');
 
-searchInput.addEventListener('input', (e) => {
-    if (e.currentTarget.value !== "") {
-        fetchCountries(e.target.value);
+searchInput.addEventListener('input', debounce((e) => {
+    const countryName = e.target.value.trim()
+
+    if (countryName !== "") {
+        list.innerHTML = "";
+        fetchCountries(countryName);
     };
-});
-
-
-fetchCountries(ukra);
+}, DEBOUNCE_DELAY));
