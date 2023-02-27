@@ -21,6 +21,8 @@ body {
 
 .country-list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .country-list__item {
@@ -32,4 +34,24 @@ body {
 .country-list__name {
   margin: 0;
   font-size: 2rem;
+}
+
+.country-info__name {
+  margin: 0 0 2rem 0;
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.country-info__name img {
+  margin-right: 1rem;
+}
+
+.country-info__desc {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+}
+
+.country-info__value {
+  margin-right: 0.5rem;
+  font-weight: 700;
 }
