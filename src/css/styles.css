@@ -51,7 +51,7 @@ body {
   font-size: 2rem;
 }
 
-.country-info__value {
+.country-info--bold {
   margin-right: 0.5rem;
   font-weight: 700;
 }
